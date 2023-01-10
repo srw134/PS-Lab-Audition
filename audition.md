@@ -26,9 +26,15 @@ except Exception as e:
     print(e)
 ~~~
 
+![](./002.png)
+
 Step 4: Now we need to save this code by hitting the ESC key then entering in ':wq' key sequence, this will save the contents of the file and exit back to the Linux CLI. 
 
+![](./003.png)
+
 Step 5: Now its time to run this script and see what its output is. This can be done with the python3 ./overall-cpu-util.py command. 
+
+![](./004.png)
 
 What you should be seeing now is a running printout of the current overall processor utilization for the virtual environment. As specified in the fifth line of code, the current interval is set to 3 seconds. 
 
@@ -37,6 +43,8 @@ What you should be seeing now is a running printout of the current overall proce
 Now we are going to extend on this functionality and show how we can view the processor utilization for a specific process, to do this you must first stop the script from running by using the Ctrl-C key sequence. 
 
 Step 6: To get started we are going to follow the same process as we did before, and create a new file with vim and paste in the contents of the next script shown below. To do this use the vim ./process-cpu-util.py command.
+
+![](./005.png)
 
 Step 7: Now that you are inside of vim again, you will need to enter insert mode and copy and paste the following code into vim. Again, please check over the pasted contents to ensure they are correct and that all indents have been placed as expected.
 
@@ -69,12 +77,21 @@ except Exception as e:
 
 ~~~
 
+![](./006.png)
+
 Step 8: Now we need to save this code by hitting the ESC key then entering in ':wq' key sequence.
+
+![](./007.png)
 
 Step 9: With this script, we have added functionality to specify a process ID at the command line. To generate a process that uses a variable amount of processor use, we will use a separate terminal window to start a ping process and flood packets to the localhost. To initiate this use the sudo ping -f 127.0.0.1 > /dev/null command in that separate window, the command will ask for the sudo password which is <em>ps</em> this will initiate a ping flood locally without any output. 
 
+![](./008.png)
+
 Step 10: Now you will need to move back to the initial terminal window and run the ps -ef command, this command is used to display the running processes on the device. Within this output look for a process that is described as ping -f 127.0.0.1, then write down the matching process ID from the second column. 
+
+![](./009.png)
 
 Step 11: Using this process ID, we can now use the saved script by using the python3 ./process-cpu-util.py new-process-id command. If everything works, you should see a running process output for the ping process. The percentage that is shown will be based on the number of process cores that are being shown to the operating system. So for example, if there is only one cpu core then the percentage will be absolute, but if there are two, then the output will be based on a total of 200%, and so on.
 
+![](./010.png)
 
