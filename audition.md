@@ -8,7 +8,9 @@ For this lab you will be taking the role as a network security engineer for Glob
 Step 1: We will begin by opening the virtual environment and accessing the Ubuntu Linux command line via a terminal. 
 
 Step 2: Using your favorite Linux CLI text editor (vim and nano are popular) create a new python text file called overall-cpu-util.py. For our instructions we are going to use the command vim overall-cpu-util.py. This is where we are going to paste in the scripts that we are going to be walking through. 
+
 ![](./001.png)
+
 Step 3: Now that you are inside of vim (in this case) you will need to enter insert mode by hitting the 'i' key, when you do this vim should say "INSERT" in the bottom left corner. Now you want to copy and paste in the following code into vim, please check over the pasted contents to ensure they are correct and that all indents have been placed as expected, remember, Python uses the indentation to indicate levels of its logic and if they are not correct the script will not work as expected. 
 
 ~~~
